@@ -36,3 +36,20 @@ while True:
         else:
             stellventil_position = calculate_position(error, learning_model)
         # Übergabe an MINI-ZB2GS Relais
+
+python-automations/
+├── energy_management/
+│   ├── heat_demand_predictor.py      # Wärmebedarf prognostizieren
+│   ├── cop_model.py                  # WP-Kennlinien
+│   ├── storage_optimizer.py          # Speicher-Ladestrategie
+│   ├── room_controller.py            # Raumtemp-Regelung (PID/Lernend)
+│   └── cost_optimizer.py             # Kostenoptimierung
+├── database/
+│   ├── schema.sql
+│   └── db_manager.py
+├── sensors/
+│   ├── ha_integration.py             # Home Assistant Daten
+│   ├── modbus_client.py              # UVR610 via Synology
+│   ├── can_bus_reader.py             # Vitocharge Vx3 (Waveshare)
+│   └── zigbee_reader.py              # Sonoff-Geräte
+└── main.py
